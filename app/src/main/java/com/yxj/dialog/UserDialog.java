@@ -14,8 +14,8 @@ import android.widget.GridView;
  */
 public class UserDialog extends BaseDialog {
 
-    protected UserDialog(@NonNull Context context, int themeResId) {
-        super(context, themeResId);
+    protected UserDialog(@NonNull Context context) {
+        super(context);
     }
 
     public static class Builder extends BaseDialog.Builder{

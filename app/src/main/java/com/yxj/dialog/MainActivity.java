@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .setBtnRight("德国",(dialog)->{
                             Log.e("yxj","btnRight");
                         })
-                        .setAnim(AnimType.Slidebottom)
+                        .setAnim(AnimType.Fadein)
                         .setDuration(1000)
-                        .setGravity(Gravity.BOTTOM)
+                        .setGravity(Gravity.CENTER)
                         .show();
 
                 break;

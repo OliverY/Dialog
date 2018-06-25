@@ -22,8 +22,8 @@ import com.yxj.dialog.anim.BaseAnim;
  */
 public class BaseDialog extends Dialog {
 
-    protected BaseDialog(@NonNull Context context, int themeResId) {
-        super(context, themeResId);
+    protected BaseDialog(@NonNull Context context) {
+        super(context, R.style.Dialog);
     }
 
     @Override
@@ -35,7 +35,6 @@ public class BaseDialog extends Dialog {
         // window水平方向全屏显示
         Window window = this.getWindow();
         WindowManager.LayoutParams layoutParams = getWindow().getAttributes();
-        layoutParams.gravity = Gravity.BOTTOM;
         layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
         layoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
 
@@ -63,7 +62,7 @@ public class BaseDialog extends Dialog {
         public Dialog create() {
             root = (FrameLayout) LayoutInflater.from(context).inflate(R.layout.dialog, null);
 
-            dialog = new BaseDialog(context, R.style.Dialog);
+            dialog = new BaseDialog(context);
             dialog.setContentView(root);
 
             dialog.setCancelable(cancelAble);

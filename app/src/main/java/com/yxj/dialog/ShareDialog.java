@@ -14,8 +14,8 @@ import android.widget.GridView;
  */
 public class ShareDialog extends BaseDialog {
 
-    protected ShareDialog(@NonNull Context context, int themeResId) {
-        super(context, themeResId);
+    protected ShareDialog(@NonNull Context context) {
+        super(context);
     }
 
     public static class Builder extends BaseDialog.Builder{
