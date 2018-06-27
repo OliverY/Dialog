@@ -1,5 +1,6 @@
 package com.yxj.dialog;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -47,6 +48,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Log.e("yxj","btnRight");
                         })
                         .setAnim(AnimType.Fadein)
+                        .setOnCancelListener((DialogInterface dialog)->{
+                            Log.e("yxj","cancel");
+                        })
                         .setDuration(1000)
                         .setGravity(Gravity.CENTER)
                         .show();
